@@ -47,14 +47,23 @@ impl Application for GUI {
         String::from("DEMO")
     }
 
-    fn update(&mut self, _message: Self::Message) -> Command<Self::Message>{
+    fn update(&mut self, message: Self::Message) -> Command<Self::Message>{
+        match message {
+            Message::Start => {
+                self.tick_state = TickState::Ticking;
+            }
+            Message::Stop => {
+                self.tick_state = TickState::Stopped;
+            }
+            Message::Reset => {}
+        }
         Command::none()
     }
 
     fn view(&mut self) -> Element<Self::Message> {
         let duration_text = "00:00:00.00";
         
-        let start_stop_text = match.self.tick_state {
+        let start_stop_text = match self.tick_state {
             TickState::Stopped => Text::new("Start")
                 .horizontal_alignment(HorizontalAlignment::Center)
                 .font(FONT),
@@ -63,7 +72,7 @@ impl Application for GUI {
                 .font(FONT),
         };
 
-        let start_stop_message = match.self.tick_state {
+        let start_stop_message = match self.tick_state {
             TickState::Stopped => Message::Start,
             TickState::Ticking => Message::Stop,
         };
