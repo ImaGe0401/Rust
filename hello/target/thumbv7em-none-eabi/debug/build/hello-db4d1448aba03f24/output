@@ -1,0 +1,2 @@
+cargo:rustc-link-search=/home/imanogen/Rust/hello/target/thumbv7em-none-eabi/debug/build/hello-db4d1448aba03f24/out
+cargo:rerun-if-changed=memory.x

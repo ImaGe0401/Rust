@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/imanogen/Rust/hello/target/thumbv7em-none-eabi/debug/build/typenum-27ca0315f15a64f9/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/imanogen/Rust/hello/target/thumbv7em-none-eabi/debug/build/typenum-27ca0315f15a64f9/out/op.rs

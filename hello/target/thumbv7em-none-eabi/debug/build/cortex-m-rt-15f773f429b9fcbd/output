@@ -1,0 +1,6 @@
+cargo:rustc-link-lib=static=cortex-m-rt
+cargo:rustc-cfg=cortex_m
+cargo:rustc-cfg=armv7m
+cargo:rustc-link-search=/home/imanogen/Rust/hello/target/thumbv7em-none-eabi/debug/build/cortex-m-rt-15f773f429b9fcbd/out
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=link.x.in
